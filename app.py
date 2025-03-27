@@ -6,7 +6,8 @@ import os
 
 app = Flask(__name__)
 # CORS(app)
-CORS(app, origins=["http://localhost:5173", "https://insurance-policy-management-system.vercel.app"])
+# CORS(app, origins=["http://localhost:5173", "https://insurance-policy-management-system.vercel.app"])
+CORS(app, resources={r"/*": {"origins": "*"}}) 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///insurance.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
