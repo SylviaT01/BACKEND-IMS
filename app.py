@@ -5,7 +5,8 @@ from models import db, InsurancePolicy
 import os
 
 app = Flask(__name__)
-CORS(app)
+# CORS(app)
+CORS(app, origins=["https://insurance-policy-management-system.vercel.app"])
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///insurance.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
